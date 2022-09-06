@@ -63,6 +63,7 @@ button.button {
     border-color: lightgray;
     border-radius: 5px;
     height: 30px;
+    margin-bottom: 15px;
 }
 button.button:hover {
     background-color: darkgray;
@@ -77,4 +78,9 @@ a {
 nav {
     margin-top: 15px;
     margin-bottom: 15px;
+    background-color: #1f1f2147;
+}
+div.nav {
+    display: flex;
+    justify-content: space-evenly;    
 }
