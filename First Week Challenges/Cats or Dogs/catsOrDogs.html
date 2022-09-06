@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="./styling.css" />
+    <meta charset="UTF-8" . />
+    <meta http-equiv="X-UA-Comptaible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Catz or Dogz?</title>
+  </head>
+  <body>
+    <div class="title">
+      <h1>Catz or Dogz?</h1>
+      <h3>A survey by: <em>Kevin Ritz</em></h3>
+    </div>
+    <div class="images">
+      <img
+        src="./assets/dogs.jpg"
+        alt="cute dog photo"
+        style="width: 400px; height: 400px"
+      />
+      <h1><strong>OR</strong></h1>
+      <img
+        src="./assets/cats.jpg"
+        alt="cute cat photo"
+        style="width: 400px; height: 400px"
+      />
+    </div>
+    <div class="reasons">
+        <h2>Why do people love dogs?</h2>
+        <hr />
+        <p>
+            <ul>
+                <li>Reason 1: Dogs are playful</li>
+                <li>Reason 2: Dogs help with stress</li>
+                <li>Reason 3: Dogs listen better</li>
+                <li>Reason 4: Dogs are companions</li>
+                <li>Reason 5: Dogs are a part of your family</li>
+            </ul>
+        </p>
+        <h2>Why do people love cats?</h2>
+        <hr />
+        <p>
+            <ul>
+                <li>Reason 1: Cats have less energy</li>
+                <li>Reason 2: Cats are easy to take care of</li>
+                <li>Reason 3: Cats are independent</li>
+                <li>Reason 4: Cats can be calming</li>
+                <li>Reason 5: Don't require big yards to own</li>
+            </ul>
+        </p>
+    </div>
+    <div>
+        <h1>So... Dogz or Catz?</h1>
+        <hr />
+        <form action="https://kodeden.com/" method="post">
+            <div class="firstName">
+                <label for="firstName">First Name:</label>
+                <input type="text" id="firstName" placeholder="First Name Here..." />
+              </div>
+              <div class="lastName">
+                  <label for="lastName">Last Name:</label>
+                  <input type="text" id="lastName" placeholder="Last Name Here..." />
+                </div>
+                <div class="radioButtons">
+                    <label for="RadioPreference">Catz or Dogz?</label>
+                    <div>
+                        <input type="radio" id="radio" value="Catz" name="RadioPreference"/>Catz
+                        <input type="radio" id="radio" value="Dogz" name="RadioPreference"/>Dogz
+                    </div>
+                </div>
+                <div class="ReasonWhy">
+                    <label for="ReasonWhy">Can you explain your choice in a few words?</label>
+                    <textarea  id="ReasonWhy" name="ReasonWhy"rows="4" cols="40"></textarea>
+                  </div>
+
+            <button>
+                Submit
+            </button>
+            <button type="button">Clear</button>
+        </form>
+    </div>
+  </body>
+</html>
