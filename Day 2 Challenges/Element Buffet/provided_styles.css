@@ -1,0 +1,40 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.row {
+    flex: 1;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.tan {
+    background: #f0efeb;
+}
+
+.purp {
+    background: #dfe7fd;
+}
+
+.salmon {
+    background: #fde2e4;
+}
+
+.olive {
+    background: #e2ece9;
+}
+
+#weird-card {
+    width: 13rem; 
+    height: 13rem; 
+    background: black;
+}
+
