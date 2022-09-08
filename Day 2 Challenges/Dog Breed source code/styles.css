@@ -1,0 +1,52 @@
+/* ========== START of pre-made CSS ========== */
+/* ========= Do NOT alter this  CSS  ======== */
+article {
+    background-color: #023047;
+    color: #FFF;
+    margin: 1rem;
+}
+
+h4 {
+    margin: 0;
+    margin-bottom: 1rem;
+}
+
+p {
+    margin: 0;
+}
+
+.row {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.m-1 {
+    margin: 1rem;
+}
+
+#poodle {
+    padding-right: 1rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+#pit {
+    padding-left: 1rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+#belgian {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-bottom: 1rem;
+}
+
+#german {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 1rem;
+}
+/* ========== END of pre-made CSS ========== */
+
+/* Write your CSS HERE */
