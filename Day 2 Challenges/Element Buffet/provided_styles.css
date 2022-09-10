@@ -43,6 +43,7 @@ body {
   align-items: center;
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
+  box-shadow: 3px 3px 3px;
 }
 
 hr {
@@ -51,4 +52,78 @@ hr {
   color: #dfe7fd;
   background-color: #dfe7fd;
   border-color: transparent;
+}
+
+#yell {
+  border-radius: 5px;
+  color: coral;
+  height: 32px;
+  background: transparent;
+  border: 1px solid coral;
+}
+#bark {
+  border-radius: 2px;
+  border: 1px solid transparent;
+  background-color: purple;
+  height: 32px;
+  color: white;
+}
+#run {
+  border-radius: 15px;
+  border: 1px solid transparent;
+  background-color: purple;
+  height: 32px;
+  color: white;
+}
+
+#cry {
+  text-shadow: 0 0 rgb(207, 87, 107);
+  border-radius: 5px;
+  color: #0000001c;
+  height: 32px;
+  background: transparent;
+  border: 1px solid rgb(207, 87, 107);
+  box-shadow: 1px 1px 1px;
+}
+
+li {
+  display: flex;
+  height: 30px;
+  background-color: coral;
+  border-radius: 7px;
+  align-items: center;
+  justify-content: center;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  list-style: none;
+  list-style-image: url("./assets/bars-staggered-solid.svg");
+}
+li:hover {
+  display: flex;
+  height: 30px;
+  background-color: white;
+  border-radius: 7px;
+  list-style: none;
+  align-items: center;
+  justify-content: center;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+h2 {
+  font-family: monospace;
+}
+
+img {
+  height: 15px;
+}
+
+button {
+  display: flex;
+  align-items: center;
+  margin-right: 15px;
+}
+.button {
+  display: flex;
+  flex-direction: row;
 }
