@@ -1,0 +1,26 @@
+html {
+    font-size: 16px;
+    font-family: Copperplate, "Copperplate Gothic Light", fantasy; 
+}
+
+/* Layout  */
+.page-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.d-flex {
+    display: flex;
+}
+
+.fd-col {
+    flex-direction: column;
+}
+
+.f-1 {
+    flex: 1;
+}
+
+
+
+
