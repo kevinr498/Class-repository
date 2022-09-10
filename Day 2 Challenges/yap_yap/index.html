@@ -11,46 +11,50 @@
     <h1>Yap Yap</h1>
     <h4>Complain about... anything!</h4>
     <!-- Main page wrapper -->
-    <div class="page-wrapper">
-      <div class="form-box">
-        <h3>Tell us what's on your mind.</h3>
-        <hr />
+    <form action="https://kodeden.com/" method="post">
+      <div class="page-wrapper">
+        <div class="form-box">
+          <h4>Tell us what's on your mind.</h4>
+          <hr />
 
-        <!-- Form row # 1 -->
-        <div class="d-flex">
-          <div class="f-1 d-flex fd-col">
-            <span>What day is it?</span>
-            <input type="date" />
+          <!-- Form row # 1 -->
+          <div class="d-flex">
+            <div class="f-1 d-flex fd-col">
+              <span>What day is it?</span>
+              <input type="date" />
+            </div>
+            <div class="f-1 d-flex fd-col">
+              <span>Complaint Category</span>
+              <select>
+                <option value="work">Work</option>
+                <option value="personal">Personal</option>
+                <option value="health">Health</option>
+                <option value="spiritual">Spiritual</option>
+              </select>
+            </div>
           </div>
-          <div class="f-1 d-flex fd-col">
-            <span>Complaint Category</span>
-            <select>
-              <option value="work">Work</option>
-              <option value="personal">Personal</option>
-              <option value="health">Health</option>
-              <option value="spiritual">Spiritual</option>
-            </select>
-          </div>
-        </div>
 
-        <!-- Form row # 2 -->
-        <div class="d-flex">
-          <div class="f-1 d-flex fd-col">
-            <span>First Name:</span>
-            <input type="text" />
+          <!-- Form row # 2 -->
+          <div class="d-flex">
+            <div class="f-1 d-flex fd-col">
+              <span>First Name:</span>
+              <input type="text" />
+            </div>
+            <div class="f-1 d-flex fd-col">
+              <span>Last Name:</span>
+              <input type="text" />
+            </div>
           </div>
-          <div class="f-1 d-flex fd-col">
-            <span>Last Name:</span>
-            <input type="text" />
-          </div>
-        </div>
 
-        <div class="d-flex fd-col">
-          <span>Tell us what happened...</span>
-          <textarea cols="30" rows="10"></textarea>
+          <div class="d-flex fd-col">
+            <span>Tell us what happened...</span>
+            <textarea cols="30" rows="10"></textarea>
+          </div>
+          <button id="submit">Submit</button>
+          <h6>Recognize my button styling?</h6>
         </div>
       </div>
-    </div>
+    </form>
   </body>
 </html>
 <source />
