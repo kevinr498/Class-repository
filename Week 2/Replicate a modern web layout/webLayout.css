@@ -1,0 +1,36 @@
+.container {
+  height: 100vh;
+  display: grid;
+  grid-template-areas:
+    "header header ad"
+    "sidebarNav mainContent mainContent"
+    "sidebarNav footer footer";
+  background-color: white;
+  color: black;
+  gap: 5px;
+  grid-template-rows: 50px 1fr 30px;
+  grid-template-columns: 125px 2fr 1fr;
+}
+
+.header {
+  grid-area: header;
+  background-color: blue;
+}
+
+.ad {
+  grid-area: ad;
+  background-color: orange;
+}
+
+.sidebarNav {
+  grid-area: sidebarNav;
+  background-color: grey;
+}
+.mainContent {
+  grid-area: mainContent;
+  background-color: aquamarine;
+}
+.footer {
+  grid-area: footer;
+  background-color: blueviolet;
+}
