@@ -1,0 +1,38 @@
+.header-back {
+  display: flex;
+  margin: 5px;
+  align-content: center;
+  align-items: center;
+}
+.twitter-title {
+}
+
+.muted {
+  font-size: 10px;
+}
+
+img {
+  width: 100vw;
+  height: auto;
+}
+
+#banner {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row;
+  font-size: 80px;
+  margin-top: -50px;
+  margin-left: 50px;
+  color: blueviolet;
+  width: fit-content;
+  z-index: 99999;
+}
+
+i.fa-twitter {
+  background-color: ghostwhite;
+  border-radius: 50px;
+  border-style: solid;
+  border-color: black;
+  padding: 10px;
+  border-width: 4px;
+}
