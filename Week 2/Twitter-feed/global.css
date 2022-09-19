@@ -46,3 +46,8 @@ i {
   display: flex;
   flex-direction: column;
 }
+
+.tweetHeader {
+  display: flex;
+  flex-direction: row;
+}
