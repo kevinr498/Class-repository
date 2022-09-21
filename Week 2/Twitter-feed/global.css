@@ -50,4 +50,26 @@ i {
 .tweetHeader {
   display: flex;
   flex-direction: row;
+  border-bottom-color: rgba(128, 128, 128, 0.651);
+  border-top-color: transparent;
+  border-right-color: transparent;
+  border-left-color: transparent;
+  border-style: solid;
+  border-width: 1px;
+  width: 90%;
+  margin-left: 5%;
+  justify-content: space-evenly;
+}
+.tweetedText {
+  color: white;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  align-content: center;
+}
+
+hr {
+  width: 90%;
+  border-color: rgba(255, 255, 255, 0.466);
 }

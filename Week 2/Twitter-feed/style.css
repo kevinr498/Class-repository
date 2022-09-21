@@ -36,3 +36,48 @@ i.fa-twitter {
   padding: 10px;
   border-width: 4px;
 }
+
+h5:hover {
+  border-bottom-color: lightblue;
+  border-style: solid;
+  border-width: 1px;
+  border-top-color: transparent;
+  border-right-color: transparent;
+  border-left-color: transparent;
+}
+#TweetBanner {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row;
+  font-size: 25px;
+  color: blueviolet;
+  width: fit-content;
+  margin-left: 15px;
+  margin-top: 5px;
+  z-index: 99999;
+}
+
+.tweetbox {
+  display: flex;
+  flex-direction: column;
+  color: white;
+}
+#tweet {
+  font-size: 15px;
+  margin-top: 5px;
+}
+
+.commentShareLike {
+  display: flex;
+  font-size: 10px;
+  margin-top: 10px;
+  justify-content: space-between;
+  width: 80%;
+}
+.tweetboxChat {
+  width: 100vw;
+  color: white;
+}
+p.muted {
+  margin-left: 5px;
+}
