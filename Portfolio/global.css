@@ -1,0 +1,13 @@
+.grid {
+  grid-column: auto;
+  display: grid;
+  grid-template-areas: "sidePanel mainBody";
+  grid-template-columns: 20% 80%;
+  grid-template-rows: auto;
+}
+.sidePanel {
+  grid-area: sidePanel;
+}
+.mainBody {
+  grid-area: mainBody;
+}
