@@ -7,11 +7,13 @@
 }
 .sidePanel {
   grid-area: sidePanel;
+  max-width: 250px;
+  min-height: 100vh;
   padding: 5px;
   background: linear-gradient(
     146.43deg,
     forestgreen 1.77%,
-    crimson 62.74%
+    lightblue 62.74%
   ) !important;
   height: 100%;
   box-shadow: black 2px 12px 23px;
@@ -39,15 +41,16 @@ html {
 
 button {
   height: 32px;
-  width: fit-content;
+  width: 100%;
+  max-width: 150px;
   border-radius: 12px;
   border: transparent;
   margin: 10px;
   cursor: pointer;
   background: linear-gradient(
     146.43deg,
-    forestgreen 1.77%,
-    white 62.74%
+    grey 1.77%,
+    lightgreen 62.74%
   ) !important;
   color: white;
   box-shadow: black 2px 5px 5px;
@@ -56,11 +59,7 @@ button {
 button:hover {
   opacity: 0.8;
   box-shadow: none;
-  background: linear-gradient(
-    146.43deg,
-    white 1.77%,
-    forestgreen 62.74%
-  ) !important;
+  background: linear-gradient(146.43deg, green 1.77%, white 62.74%) !important;
 }
 
 .button {
