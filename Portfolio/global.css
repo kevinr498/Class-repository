@@ -7,7 +7,70 @@
 }
 .sidePanel {
   grid-area: sidePanel;
+  padding: 5px;
+  background: linear-gradient(
+    146.43deg,
+    forestgreen 1.77%,
+    crimson 62.74%
+  ) !important;
+  height: 100%;
+  box-shadow: black 2px 12px 23px;
 }
 .mainBody {
   grid-area: mainBody;
+  display: grid;
+  justify-items: center;
+  align-items: start;
+  justify-content: center;
+}
+
+body {
+  margin: 0;
+}
+
+.muted {
+  color: #808080d9;
+}
+
+html {
+  font-family: "SF Pro Text", "Myriad Set Pro", "SF Pro Icons", "Helvetica Neue",
+    "Helvetica", "Arial", sans-serif;
+}
+
+button {
+  height: 32px;
+  width: fit-content;
+  border-radius: 12px;
+  border: transparent;
+  margin: 10px;
+  cursor: pointer;
+  background: linear-gradient(
+    146.43deg,
+    forestgreen 1.77%,
+    white 62.74%
+  ) !important;
+  color: white;
+  box-shadow: black 2px 5px 5px;
+  transition: 1s;
+}
+button:hover {
+  opacity: 0.8;
+  box-shadow: none;
+  background: linear-gradient(
+    146.43deg,
+    white 1.77%,
+    forestgreen 62.74%
+  ) !important;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+a {
+  text-decoration: none;
+  color: black;
 }
