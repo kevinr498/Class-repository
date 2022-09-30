@@ -73,3 +73,19 @@ a {
   text-decoration: none;
   color: black;
 }
+
+hr {
+  width: 100%;
+  color: black;
+  height: 2px;
+  z-index: -1;
+  background-color: currentcolor;
+}
+
+.videoProject1 {
+  width: 100%;
+    border-radius: 15px;
+    border: solid;
+    border-color: ghostwhite;
+    border-width: 5px;
+}

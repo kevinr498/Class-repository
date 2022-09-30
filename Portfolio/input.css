@@ -53,3 +53,13 @@ iframe {
   border-radius: 15px;
   border: transparent;
 }
+@media (min-width: 1400px)  {
+  .mainBody {
+    margin-right: 15px;
+  }
+}
+@media (max-width: 480px)  {
+  .sidePanel > h1 {
+    font-size: initial;
+  }
+}
