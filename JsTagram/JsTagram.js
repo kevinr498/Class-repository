@@ -1,35 +1,69 @@
-const UserData = {
-  name: "Kevin Ritz",
-  age: "24",
-  hobby: "Triathlons",
+const userData = {
+  First: "Kevin",
+  Last: "Ritz",
+  emailAddress: "kevin@email.com",
+  password: "Triathlons",
 };
 
-const userDataKeys = Object.keys(UserData);
+const userDataKeys = Object.keys(userData);
 console.log(userDataKeys);
 
-for (let i = 0; i < UserData.length; i++) {
-  console.log(UserData[UserDataKey[i]]);
+for (let i = 0; i < userDataKeys.length; i++) {
+  console.log(userData[userDataKeys[i]]);
+  for (const key in userData) {
+    console.log(userData[userDataKeys[i]]);
+  }
 }
 
-const users = ["Ryan", "Kolton", "Kody"]; // Add more names to grow Loop City!
+const users = [];
 
-/////////////////////// DON'T ALTER THIS CODE //////////////////////////
+function userInfo(users) {
+  users = userData.First;
+}
+console.log(userInfo());
+
 const UserList = document.getElementById("UserList");
-////////////////////////////////////////////////////////////////////////
 
-// HINT!!! Looks like the way to get the amount of names is citizens.length
-// Maybe that could be used in our loop.....just a thought
+// function addUserData() {
+//   userData.Object.keys();
+// }
 
-/*
-  CODE TO PUT INSIDE OF LOOP BLOCK
-  const listElement = document.createElement('li');
-  listElement.innerText = citizens[i];
-  citizenList.appendChild(listElement);
-*/
-document.getElementById("addUserButton").addEventListener("click", () =>
-  users.forEach((users) => {
+// function addUser(FormData) {
+//   () => document.getElementById("UserList");
+//   const listElement = document.createElement("li");
+//   listElement.innerText = FormData.value;
+//   UserList.appendChild(users);
+//   console.log(listElement);
+//   return false;
+// }
+
+document.getElementById("removeUserList").addEventListener("click", () => {
+  users.pop();
+  console.log(users);
+  const e = document.querySelector("li:last-child");
+  e.remove();
+  const s = document.querySelector("hr");
+  s.remove();
+  return false;
+});
+
+function addUser(FormData) {
+  users.push(FormData.value);
+  console.log(users);
+  addUserList();
+  addhr();
+  return false;
+}
+function addUserList() {
+  users.forEach((user) => {
     const listElement = document.createElement("li");
-    listElement.innerText = users;
+    listElement.innerText = user;
     UserList.appendChild(listElement);
-  })
-);
+  });
+}
+
+function addhr() {
+  var elem = document.createElement("hr");
+  elem.setAttribute("width", "100%");
+  document.body.appendChild(elem);
+}
