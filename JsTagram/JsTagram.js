@@ -1,26 +1,42 @@
-const userData = {
-  First: "Kevin",
+
+let userData = {
+  users: [ {  First: "Kevin",
   Last: "Ritz",
   emailAddress: "kevin@email.com",
   password: "Triathlons",
-};
+  },
+{
+  First: "Keith",
+  Last: "Branch",
+  emailAddress: "branch@email.com",
+  password: "UniversalPassword123",
+}]
+}
 
-const userDataKeys = Object.keys(userData);
+const userDataKeys = Object.keys(userData.users);
 console.log(userDataKeys);
 
 for (let i = 0; i < userDataKeys.length; i++) {
-  console.log(userData[userDataKeys[i]]);
-  for (const key in userData) {
-    console.log(userData[userDataKeys[i]]);
+  console.log(userData.users[userDataKeys[i]]);
+  for (const key in userData.users) {
+    console.log(userData.users[userDataKeys[i]]);
   }
 }
+//Adding and removing users
+userData.users.push({  First: "Brandon",
+Last: "Stevens",
+emailAddress: "steveb@email.com",
+password: "FunnyPassword",})
+console.log(userData.users);
+userData.users.pop()
+console.log(userData.users);
 
-const users = [];
+userData.users.push({  First: "Brandon",
+Last: "Stevens",
+emailAddress: "steveb@email.com",
+password: "FunnyPassword",})
+console.log(userData.users);
 
-function userInfo(users) {
-  users = userData.First;
-}
-console.log(userInfo());
 
 const UserList = document.getElementById("UserList");
 
@@ -36,6 +52,7 @@ const UserList = document.getElementById("UserList");
 //   console.log(listElement);
 //   return false;
 // }
+const users = [];
 
 document.getElementById("removeUserList").addEventListener("click", () => {
   users.pop();
