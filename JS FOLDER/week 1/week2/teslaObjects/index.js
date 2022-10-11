@@ -1,11 +1,14 @@
 class Vehicle {
+  #numberOfDoors = 4;
+  #numberOfWheels = 4;
   constructor(
     color,
     trim,
     wheels,
     interior,
     enhancedAutoPilot,
-    fullSelfDrivingCapability
+    fullSelfDrivingCapability,
+    vars
   ) {
     color = String;
     trim = String;
@@ -13,24 +16,26 @@ class Vehicle {
     interior = String;
     enhancedAutoPilot = Boolean;
     fullSelfDrivingCapability = Boolean;
-  }
-
-  #numberOfWheels(wheels) {
-    wheels = 4;
-  }
-  #numberOfDoors(doors) {
-    doors = 4;
+    vars = vars;
   }
 }
-function details2() {
-  return `Color is ${this.color}, trim is ${this.trim}, wheels are ${
-    this.wheels
-  }, interior is ${this.interior}, ehanced auto pilot is ${
-    this.enhancedAutoPilot ? "selected" : "not selected"
-  }, and full self driving mode is ${
-    this.fullSelfDrivingCapability ? "selected" : "not selected"
-  }`;
+class ModelS {
+  #topSpeed = [
+    {
+      plaid: "the top speed is 200mph",
+    },
+    { standard: "the top speed is 149mph" },
+  ];
+  constructor() {}
 }
+vars(
+  (this.color = color),
+  (this.trim = trim),
+  (this.wheels = wheels),
+  (this.interior = interior),
+  (this.enhancedAutoPilot = enhancedAutoPilot),
+  (this.fullSelfDrivingCapability = fullSelfDrivingCapability)
+);
 
 function details() {
   return `Your Model S has a ${this.color} exterior color with the ${
@@ -49,15 +54,15 @@ function getValues() {
   this.wheels = document.getElementById("wheelOptions").value;
   this.trim = document.getElementById("trimOptions").value;
   this.interior = document.getElementById("interiorOptions").value;
-  this.enhancedAutoPilot = document.getElementById("enhancedfeatures").value;
-  this.fullSelfDrivingCapability = document.getElementById("fSDCF").value;
-  plaid();
+  setBooleanEnhanced();
+  setBooleanFull();
+  howFast();
   text();
   console.log(details());
   return false;
 }
 
-function plaid() {
+function howFast() {
   if (this.trim === "Plaid") return console.log("the top speed is 200");
   else console.log("the top speed is 149");
 }
@@ -67,3 +72,22 @@ function text() {
   textElement.innerText = details();
   document.body.appendChild(textElement);
 }
+function setBooleanEnhanced() {
+  if (document.getElementById("interiorOptions").value === "Enabled")
+    return (this.enhancedAutoPilot = true);
+  else this.enhancedAutoPilot = false;
+}
+function setBooleanFull() {
+  if (document.getElementById("fSDCF").value === "Enabled")
+    return (this.fullSelfDrivingCapability = true);
+  else this.fullSelfDrivingCapability = false;
+}
+// function details2() {
+//   return `Color is ${this.color}, trim is ${this.trim}, wheels are ${
+//     this.wheels
+//   }, interior is ${this.interior}, ehanced auto pilot is ${
+//     this.enhancedAutoPilot ? "selected" : "not selected"
+//   }, and full self driving mode is ${
+//     this.fullSelfDrivingCapability ? "selected" : "not selected"
+//   }`;
+// }
