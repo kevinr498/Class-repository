@@ -6,9 +6,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./index.css" />
     <script src="./index.js" defer></script>
-    <title>OOP</title>
+    <title>Tesla</title>
   </head>
   <body>
-    <h1>hello</h1>
+    <h1>Tesla Model S</h1>
+    <form onsubmit="return getValues()">
+      <select name="Color Options" id="colorOptions">
+        <option>Blue</option>
+        <option>Red</option>
+        <option>Green</option>
+        <option>White</option>
+        <option>Black</option>
+        <option>Grey</option>
+      </select>
+      <select name="interior" id="interiorOptions">
+        <option>White</option>
+        <option>Black</option>
+        <option>Grey</option>
+      </select>
+      <select name="trim" id="trimOptions">
+        <option>Standard</option>
+        <option>Premium</option>
+        <option>Plaid</option>
+      </select>
+      <select name="wheelOptions" id="wheelOptions">
+        <option>Aero</option>
+        <option>Premium</option>
+        <option>Plaid</option>
+      </select>
+      <select name="enhancedfeatures" id="enhancedfeatures">
+        <option>true</option>
+        <option>false</option>
+      </select>
+      <select name="fSDCF" id="fSDCF">
+        <option>true</option>
+        <option>false</option>
+      </select>
+      <button>Submit Order</button>
+    </form>
   </body>
 </html>
