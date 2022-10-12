@@ -73,14 +73,16 @@ function text() {
   document.body.appendChild(textElement);
 }
 function setBooleanEnhanced() {
-  if (document.getElementById("interiorOptions").value === "Enabled")
+  if (document.getElementById("enhancedfeatures").value === "Enabled")
     return (this.enhancedAutoPilot = true);
-  else this.enhancedAutoPilot = false;
+  else document.getElementById("enhancedfeatures").value === "Disabled";
+  return (this.enhancedAutoPilot = false);
 }
 function setBooleanFull() {
   if (document.getElementById("fSDCF").value === "Enabled")
     return (this.fullSelfDrivingCapability = true);
-  else this.fullSelfDrivingCapability = false;
+  else document.getElementById("fSDCF").value === "Disabled";
+  return (this.fullSelfDrivingCapability = false);
 }
 // function details2() {
 //   return `Color is ${this.color}, trim is ${this.trim}, wheels are ${

@@ -1,0 +1,38 @@
+body {
+    background: linear-gradient(146.43deg, #0145ff 1.77%, #0affff 62.74%) no-repeat;
+    height: 100vh;
+    color: white;
+}
+
+button {
+    margin-top: 15px;
+    height: 32px;
+    border: transparent;
+    background: linear-gradient(146.43deg, #ff7301 1.77%, #ff0a0a 62.74%);
+    color: white;
+}
+
+#tesla {
+    width: -webkit-fill-available;
+    border-radius: 15px;
+    margin: 15px;
+    border: solid;
+    border-width: 5px;
+    border-color: white;
+}
+select {
+    height: 32px;
+    border-top-left-radius: 9px;
+    border-top-right-radius: 9px;
+    border: transparent;
+    color: white;
+    background: linear-gradient(146.43deg, #ff7301 1.77%, #ff0a0a 62.74%);
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+option {
+background:#ff0a0a;
+color: white;
+}
+html {
+    font-family: "SF Pro Text","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif !important;}

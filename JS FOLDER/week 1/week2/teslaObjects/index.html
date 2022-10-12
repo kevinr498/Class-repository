@@ -10,8 +10,18 @@
   </head>
   <body>
     <h1>Tesla Model S</h1>
-    <form onsubmit="return getValues()">
+    <img
+      id="tesla"
+      alt="Tesla Image - &#8482 Tesla"
+      src="https://tesla-cdn.thron.com/delivery/public/image/tesla/08585f00-c0b7-4bda-80e4-2b78406b5582/bvlatuR/std/4096x2560/Model-S-Performance-Hero-Desktop-LHD"
+    />
+    <form
+      onsubmit="return getValues()"
+      style="display: flex; flex-direction: column"
+    >
+      <label for="colorOptions">Color Options</label>
       <select name="Color Options" id="colorOptions">
+        <option>-- Select Color --</option>
         <option>Blue</option>
         <option>Red</option>
         <option>Green</option>
@@ -19,25 +29,33 @@
         <option>Black</option>
         <option>Grey</option>
       </select>
+      <label for="interiorOptions">Interior Options:</label>
       <select name="interior" id="interiorOptions">
+        <option>-- Select Interior --</option>
         <option>White</option>
         <option>Black</option>
         <option>Grey</option>
       </select>
+      <label for="trimOptions">Trim Options:</label>
       <select name="trim" id="trimOptions">
+        <option>-- Select Trim --</option>
         <option>Standard</option>
         <option>Premium</option>
         <option>Plaid</option>
       </select>
+      <label for="wheelOptions">Wheel Options:</label>
       <select name="wheelOptions" id="wheelOptions">
+        <option>-- Select Wheel --</option>
         <option>Aero</option>
         <option>Premium</option>
         <option>Plaid</option>
       </select>
+      <label for="enhancedfeatures">Enhanced Auto Pilot:</label>
       <select name="enhancedfeatures" id="enhancedfeatures">
         <option [value]="true">Enabled</option>
         <option [value]="false">Disabled</option>
       </select>
+      <label for="fSDCF">Full Self Driving Capability:</label>
       <select name="fSDCF" id="fSDCF">
         <option [value]="true">Enabled</option>
         <option [value]="false">Disabled</option>
