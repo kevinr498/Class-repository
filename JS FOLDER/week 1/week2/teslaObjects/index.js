@@ -2,6 +2,8 @@ class Vehicle {
   #numberOfDoors = 4;
   #numberOfWheels = 4;
   constructor(
+    numberOfDoors,
+    numberOfWheels,
     color,
     trim,
     wheels,
@@ -10,31 +12,39 @@ class Vehicle {
     fullSelfDrivingCapability,
     vars
   ) {
-    color = String;
-    trim = String;
-    wheels = String;
-    interior = String;
-    enhancedAutoPilot = Boolean;
-    fullSelfDrivingCapability = Boolean;
-    vars = vars;
+    this.#numberOfDoors = numberOfDoors;
+    this.#numberOfWheels = numberOfWheels;
+    this.color = color;
+    this.trim = trim;
+    this.wheels = wheels;
+    this.interior = interior;
+    this.enhancedAutoPilot = enhancedAutoPilot;
+    this.fullSelfDrivingCapability = fullSelfDrivingCapability;
+    this.vars = vars;
   }
 }
 class ModelS {
   #topSpeed = [
     {
-      plaid: "the top speed is 200mph",
+      trim: "Plaid",
+      speed: "the top speed is 200mph",
     },
-    { standard: "the top speed is 149mph" },
+    { trim: "Standard", speed: "the top speed is 149mph" },
   ];
-  constructor() {}
+  constructor(topSpeed) {
+    this.#topSpeed = topSpeed;
+  }
 }
 vars(
-  (this.color = color),
-  (this.trim = trim),
-  (this.wheels = wheels),
-  (this.interior = interior),
-  (this.enhancedAutoPilot = enhancedAutoPilot),
-  (this.fullSelfDrivingCapability = fullSelfDrivingCapability)
+  (this.color = String),
+  (this.trim = String),
+  (this.wheels = String),
+  (this.interior = String),
+  (this.enhancedAutoPilot = Boolean),
+  (this.fullSelfDrivingCapability = Boolean),
+  (this.topSpeed = String),
+  (this.numberOfDoors = Number),
+  (this.numberOfWheels = Number)
 );
 
 function details() {

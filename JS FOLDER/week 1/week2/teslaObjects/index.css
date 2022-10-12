@@ -36,3 +36,10 @@ color: white;
 }
 html {
     font-family: "SF Pro Text","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif !important;}
+
+    p {
+        background-color: aliceblue;
+        color: black;
+        padding: 15px;
+        border-radius: 7px;
+    }

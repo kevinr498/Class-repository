@@ -1,0 +1,16 @@
+body {
+    background: linear-gradient(180deg, #ff0101 80.77%, #ffcd41 90.74%) no-repeat;
+    height: 100vh;
+    color: white;
+}
+
+button {
+    margin-top: 15px;
+    height: 32px;
+    border: transparent;
+    background: linear-gradient(146.43deg, #ff7301 1.77%, #ff0a0a 62.74%);
+    color: white;
+}
+html {
+    font-family: "SF Pro Text","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif !important;}
+
