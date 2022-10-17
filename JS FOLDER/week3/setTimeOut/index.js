@@ -125,5 +125,5 @@ runPromise();
 
 (async () => {
   const result = await prom1;
-  console.log(results);
+  console.log("results");
 })();
