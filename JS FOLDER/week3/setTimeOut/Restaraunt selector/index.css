@@ -31,9 +31,8 @@ button:hover, #buttonforFood:hover {
     color: white
 }
 
-svg {
-    width: 15px;
-    height: 15px;
+i {
+
     margin-left: 5px;
 }
 input {
