@@ -42,5 +42,5 @@ input {
     color: black;
     font-weight: bold;
     font-size: large;
-    background: linear-gradient(146.43deg, #caff0a 1.77%, #01ff4d50 62.74%);
+    background: linear-gradient(146.43deg, #caff0a 1.77%, transparent 62.74%);
 }
