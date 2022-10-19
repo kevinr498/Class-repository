@@ -1,0 +1,47 @@
+body {
+    background: linear-gradient(146.43deg, #0b4b05 1.77%, #044868 62.74%) no-repeat;
+    height: 100vh;
+    color: white;
+    font-size: large;
+    font-family: "SF Pro Text","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif !important;
+    padding: 15px;
+    }
+
+
+li {
+    list-style: none;
+}
+
+button, #buttonforFood {
+    margin-top: 15px;
+    height: 32px;
+    border: transparent;
+    border-radius: 7px;
+    background: linear-gradient(146.43deg, #01ff4d50 1.77%, #caff0a 62.74%);
+    color: rgb(0, 0, 0);
+    margin: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    width: fit-content;
+}
+button:hover, #buttonforFood:hover {
+    background: linear-gradient(146.43deg, #cef1d950 1.77%, #404433 62.74%);
+    color: white
+}
+
+svg {
+    width: 15px;
+    height: 15px;
+    margin-left: 5px;
+}
+input {
+    border-radius: 7px;
+    border: transparent;
+    height: 32px;
+    color: black;
+    font-weight: bold;
+    font-size: large;
+    background: linear-gradient(146.43deg, #caff0a 1.77%, #01ff4d50 62.74%);
+}
