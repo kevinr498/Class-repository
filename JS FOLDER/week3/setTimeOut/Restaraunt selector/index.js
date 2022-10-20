@@ -14,10 +14,10 @@ this.restaraunt = [
 ];
 
 function createUL() {
-  const container = document.getElementById("container");
+  const box = document.getElementById("box");
   const ul = document.createElement("ul");
   ul.setAttribute("id", "foodListElement");
-  container.appendChild(ul);
+  box.appendChild(ul);
   addListOfFoods();
 }
 

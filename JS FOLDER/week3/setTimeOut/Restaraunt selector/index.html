@@ -13,31 +13,33 @@
     <title>Restaraunt Selector</title>
   </head>
   <body id="container">
-    <h1>Random Food Picker!</h1>
-    <form
-      onsubmit="return addNewObject()"
-      style="display: flex; flex-direction: column"
-    >
-      <label for="colorOptions">New Restaraunt</label
-      ><input
-        type="text"
-        id="newRestaruant"
-        [name]="restaraunt.name"
-        placeholder="Restaraunt Name"
-      /><br />
-      <label for="colorOptions">New Meal</label
-      ><input
-        type="text"
-        id="newFood"
-        [name]="restaraunt.meal"
-        placeholder="Meal"
-      /><br /><button>Add New Food!<i class="fa-solid fa-burger"></i></button>
-    </form>
-    <button id="buttonforFood">
-      Pick a meal!
-      <i class="fa-solid fa-utensils"></i>
-    </button>
+    <div id="box">
+      <h1>Random Food Picker!</h1>
+      <form
+        onsubmit="return addNewObject()"
+        style="display: flex; flex-direction: column"
+      >
+        <label for="colorOptions">New Restaraunt</label
+        ><input
+          type="text"
+          id="newRestaruant"
+          [name]="restaraunt.name"
+          placeholder="Restaraunt Name"
+        /><br />
+        <label for="colorOptions">New Meal</label
+        ><input
+          type="text"
+          id="newFood"
+          [name]="restaraunt.meal"
+          placeholder="Meal"
+        /><br /><button>Add New Food!<i class="fa-solid fa-burger"></i></button>
+      </form>
+      <button id="buttonforFood">
+        Pick a meal!
+        <i class="fa-solid fa-utensils"></i>
+      </button>
 
-    <div id="results"></div>
+      <div id="results"></div>
+    </div>
   </body>
 </html>
