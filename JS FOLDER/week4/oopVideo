@@ -1,0 +1,97 @@
+//Questions:
+//----------//
+//What is Abstraction and why is it important?
+// Provide an example of Encapsulation in JavaScript.
+// Explain Inheritance and provide an example.
+// Provide an example of Polymorphism
+
+//Abstraction
+//Abstract Classes are defined as classes that cannot be instantiated i.e. whose object reference cannot be created and contains within it, one or more abstract methods
+
+function Employee() {
+  this.empName = "empName";
+  if (this.constructor === Employee) {
+    throw new Error("You cannot create an instance of Abstract Class");
+  }
+}
+// Method (function) of our abstract class
+Employee.prototype.display = function () {
+  return "Employee name is: " + this.empName;
+};
+//Created a subclass (constructor function)
+function Manager(fullName) {
+  this.empName = fullName;
+}
+//Created an object of subclass (extending abstract class)
+Manager.prototype = Object.create(Employee.prototype);
+var mang = new Manager("Aniket Davda");
+console.log(mang.display());
+
+//Encapsulation
+//Encapsulation is a process of binding the data (i.e. variables) with the functions acting on that data. It allows us to control the data and validate it
+// such as variables and setters.
+
+class Student {
+  constructor() {
+    var name;
+    var marks;
+  }
+  getName() {
+    return this.name;
+  }
+  setName(name) {
+    this.name = name;
+  }
+
+  getMarks() {
+    return this.marks;
+  }
+  setMarks(marks) {
+    this.marks = marks;
+  }
+}
+var stud = new Student();
+stud.setName("John");
+stud.setMarks(80);
+document.writeln(stud.getName() + " " + stud.getMarks());
+
+//Inheritance
+//JavaScript uses prototype based inheritance. Every object has a prototype.
+//when a method of the object is called then JavaScript tries to find the right function to execute from the prototype object
+
+function Person(name, age) {
+  this.name = name;
+  this.age = age;
+
+  function describe() {
+    return this.name + ", " + this.age + " years old.";
+  }
+}
+
+//Polymorphism
+//Extends the class further. define the same method in different objects and provides the ability to call them depending upon the object
+
+class Vehicle {
+  run() {
+    console.log(" Vehicle is running ");
+  }
+}
+class Car extends Vehicle {
+  run() {
+    console.log(" Car is running ");
+  }
+}
+class Truck extends Vehicle {
+  run() {
+    console.log(" Truck is running ");
+  }
+}
+var v1 = new Vehicle();
+var v2 = new Car();
+var v3 = new Truck();
+console.log(v1);
+v1.run();
+console.log(v2);
+v2.run();
+console.log(v3);
+v3.run();
