@@ -4,7 +4,10 @@ array.foreach((el) =>
 }
 
 function containsText(node, text) {
-    if(node.nodeType === NODE.TEXT_NODE)
+    if(node.nodeType === NODE.TEXT_NODE){}
     return node.nodValue.includes(text)
+
+}
+{
 
 }
