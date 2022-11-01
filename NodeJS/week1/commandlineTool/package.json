@@ -1,0 +1,14 @@
+{
+  "name": "commandline",
+  "version": "1.0.0",
+  "description": "Commandline",
+  "main": "index.js",
+  "scripts": {
+    "starting": "node index.js"
+  },
+  "author": "Kevin",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.1.3"
+  }
+}
