@@ -25,3 +25,5 @@ axios
   .then(async (res) => {
     // console.log("Probability:", res.data.probability, res.data.gender);
   });
+
+  
