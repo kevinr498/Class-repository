@@ -1,5 +1,19 @@
+class Name {
+  constructor(name, vars) {
+    this.name = name;
+    this.vars = vars;
+  }
+  setName() {
+    this.name = document.getElementById("nameId").value;
+    console.log(this.name);
+  }
+}
+
+vars((this.name = String));
+
 const axios = require("axios");
 const fs = require("fs");
+const { stringify } = require("querystring");
 const { save, read } = require("./file");
 
 const name = "Ross";
@@ -25,5 +39,3 @@ axios
   .then(async (res) => {
     // console.log("Probability:", res.data.probability, res.data.gender);
   });
-
-  

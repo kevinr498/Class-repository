@@ -15,7 +15,6 @@ module.exports = {
     return new Promise((resolve, reject) => {
       fs.readFile("data.json", "utf-8", (err, data) => {
         if (err) reject(err);
-        // console.log(data);
         resolve(JSON.parse(data));
       });
     });
