@@ -10,9 +10,11 @@
   </head>
   <body>
     <h1>hello world</h1>
-    <form onsubmit="return setName()">
-      <label id="nameId" for="input">Name:</label>
-      <input type="input" placeholder="name" /><button>submit</button>
+    <form onsubmit="setName()" method="get">
+      <label for="input">Name:</label>
+      <input type="input" placeholder="name" id="nameId" /><button>
+        submit
+      </button>
     </form>
   </body>
 </html>
