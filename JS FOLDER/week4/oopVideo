@@ -8,24 +8,25 @@
 //Abstraction
 //Abstract Classes are defined as classes that cannot be instantiated i.e. whose object reference cannot be created and contains within it, one or more abstract methods
 
-function Employee() {
-  this.empName = "empName";
-  if (this.constructor === Employee) {
-    throw new Error("You cannot create an instance of Abstract Class");
+class Employee {
+  constructor() {
+    if (this.constructor == Employee) {
+      throw new Error(" Object of Abstract Class cannot be created");
+    }
+  }
+  display() {
+    throw new Error("Abstract Method has no implementation");
   }
 }
-// Method (function) of our abstract class
-Employee.prototype.display = function () {
-  return "Employee name is: " + this.empName;
-};
-//Created a subclass (constructor function)
-function Manager(fullName) {
-  this.empName = fullName;
+class Manager extends Employee {
+  display() {
+    //super.display();
+    console.log("I am a Manager");
+  }
 }
-//Created an object of subclass (extending abstract class)
-Manager.prototype = Object.create(Employee.prototype);
-var mang = new Manager("Aniket Davda");
-console.log(mang.display());
+//var emp = new Employee;
+var mang = new Manager();
+mang.display();
 
 //Encapsulation
 //Encapsulation is a process of binding the data (i.e. variables) with the functions acting on that data. It allows us to control the data and validate it
