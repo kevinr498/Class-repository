@@ -12,6 +12,7 @@ function setName() {
   this.name = document.getElementById("nameId").value;
   console.log(this.name);
   return false;
+  
 }
 
 axios
