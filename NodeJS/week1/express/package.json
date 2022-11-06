@@ -1,0 +1,17 @@
+{
+  "name": "express",
+  "version": "1.0.0",
+  "description": "express",
+  "main": "app.js",
+  "scripts": {
+    "test": "start"
+  },
+  "keywords": [
+    "testenvironment"
+  ],
+  "author": "Kevin Ritz",
+  "license": "ISC",
+  "dependencies": {
+    "nodemon": "^2.0.20"
+  }
+}
