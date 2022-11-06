@@ -3,20 +3,25 @@ class Name {
     this.name = name;
   }
 }
-
 const axios = require("axios");
 const { save, read } = require("./file");
 new Name((this.name = String));
+this.name = "fred";
 
-function setName() {
-  this.name = document.getElementById("nameId").value;
-  console.log(this.name);
-  return false;
-  
-}
+// function getName() {
+//   document
+//     .getElementById("submitButton")
+//     .addEventListener("click", function setName() {
+//       const varName = this.name;
+//       varName = document.getElementById("nameId").value;
+
+//       console.log(this.name);
+//       return;
+//     });
+// }
 
 axios
-  .get("https://api.agify.io/?name=meelad", {
+  .get(`https://api.agify.io/?name=${this.name}`, {
     params: {
       name: this.name,
     },

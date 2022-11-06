@@ -6,13 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
     <script src="./index.js" defer></script>
+    <script src="./axios.js" defer></script>
     <title>Node</title>
   </head>
   <body>
     <h1>hello world</h1>
-    <form onsubmit="setName()" method="get">
+    <form method="get">
       <label for="input">Name:</label>
-      <input type="input" placeholder="name" id="nameId" /><button>
+      <input type="input" placeholder="name" id="nameId" /><button
+        id="submitButton"
+      >
         submit
       </button>
     </form>
