@@ -25,6 +25,26 @@ class UsersController {
       res.status(500).send("ERROR!");
     }
   }
+  async deleteUser(req, res) {
+    try {
+      const content = req.body;
+      await this.usersService.deleteUser(content);
+      res.status(200).send("User Deleted");
+    } catch (e) {
+      console.log(e);
+      res.status(500).send("ERROR!");
+    }
+  }
+  async updateUser(req, res) {
+    try {
+      const content = req.body;
+      await this.usersService.updateUser(content);
+      res.status(200).send("User Updated");
+    } catch (e) {
+      console.log(e);
+      res.status(500).send("ERROR!");
+    }
+  }
 }
 
 module.exports = UsersController;

@@ -1,5 +1,6 @@
 class User {
-  constructor(username, password, haircolor) {
+  constructor(id, username, password, haircolor) {
+    this.id = id;
     this.username = username;
     this.password = password;
     this.haircolor = haircolor;

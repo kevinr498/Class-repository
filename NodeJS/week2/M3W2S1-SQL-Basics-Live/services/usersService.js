@@ -11,9 +11,17 @@ class UsersService {
     return data.rows;
   }
 
-  async createUser({ username, password, haircolor }) {
-    const newUser = new User(username, password, haircolor);
+  async createUser({ id, username, password, haircolor }) {
+    const newUser = new User(id, username, password, haircolor);
     return await this.usersRepo.createUser(newUser);
+  }
+  async deleteUser({ id }) {
+    const user = new User(id);
+    return await this.usersRepo.deleteUser(user);
+  }
+  async updateUser({ id, username, password, haircolor }) {
+    const userUpdate = new User(id, username, password, haircolor);
+    return await this.usersRepo.editUser(userUpdate);
   }
 }
 

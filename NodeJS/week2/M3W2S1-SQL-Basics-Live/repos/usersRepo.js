@@ -7,17 +7,17 @@ class UsersRepo {
     return pool.query("SELECT * FROM users");
   }
 
-  createUser({ username, password, haircolor }) {
+  createUser({ id, username, password, haircolor }) {
     return pool.query(
-      "INSERT INTO users (username, password, haircolor) VALUES ($1, $2, $3)",
-      [username, password, haircolor]
+      "INSERT INTO users (id, username, password, haircolor) VALUES ($1, $2, $3, $4)",
+      [id, username, password, haircolor]
     );
   }
 
-  editUser({ username, password, haircolor, id }) {
+  editUser({ id, username, password, haircolor }) {
     return pool.query(
-      "UPDATE users set username = $1, haircolor = $2, password = $3 WHERE id = $4",
-      [username, haircolor, password, id]
+      "UPDATE users set username = $2, password = $3, haircolor = $4 WHERE id = $1",
+      [id, username, password, haircolor]
     );
   }
 
