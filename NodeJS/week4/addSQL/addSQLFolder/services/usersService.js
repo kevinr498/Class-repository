@@ -1,4 +1,4 @@
-const Input = require("../models/user");
+const inputs = require("../models/user");
 const UsersRepo = require("../repos/usersRepo");
 
 class UsersService {
@@ -11,16 +11,16 @@ class UsersService {
     return data.rows;
   }
 
-  async createInput({ id, type, color, quantity }) {
-    const newInput = new Input(id, type, color, quantity);
+  async createInput({ ids, type, color, quantity }) {
+    const newInput = new inputs(ids, type, color, quantity);
     return await this.usersRepo.createInput(newInput);
   }
-  async inputDelete({ id }) {
-    const input = new input(id);
+  async inputDelete({ ids }) {
+    const input = new inputs(ids);
     return await this.usersRepo.inputDelete(input);
   }
-  async editInput({ id, type, color, quantity }) {
-    const inputUpdate = new Input(id, type, color, quantity);
+  async editInput({ ids, type, color, quantity }) {
+    const inputUpdate = new inputs(ids, type, color, quantity);
     return await this.usersRepo.editInput(inputUpdate);
   }
 }

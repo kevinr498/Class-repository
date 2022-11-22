@@ -1,5 +1,5 @@
 CREATE TABLE inputs (
-    id SERIAL PRIMARY KEY,
+    id INTEGER REFERENCES users (id),
     type varchar(255) NOT NULL,
     color varchar(255) NOT NULL,
     quantity varchar(255)
