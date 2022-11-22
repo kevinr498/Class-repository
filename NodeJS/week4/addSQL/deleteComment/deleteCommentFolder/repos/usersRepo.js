@@ -16,10 +16,10 @@ class UsersRepo {
       [id, username, password, haircolor]
     );
   }
-  addComment({ comment_text, user_id }) {
+  addComment({ id, comment_text, user_id }) {
     return pool.query(
-      "INSERT INTO comments (comment_text, user_id) VALUES ($1, $2)",
-      [comment_text, user_id]
+      "INSERT INTO comments (id, comment_text, user_id) VALUES ($1, $2, $3)",
+      [id, comment_text, user_id]
     );
   }
 
@@ -33,8 +33,8 @@ class UsersRepo {
   deleteUser({ id }) {
     return pool.query("DELETE FROM users WHERE id = $1", [id]);
   }
-  deleteComment({ user_id }) {
-    return pool.query("DELETE FROM users WHERE id = $1", [user_id]);
+  deleteComment({ id }) {
+    return pool.query("DELETE FROM users WHERE id = $1", [id]);
   }
 }
 
