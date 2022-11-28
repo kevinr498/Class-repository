@@ -7,7 +7,7 @@
     "test": "jest",
     "start": "node index.js"
   },
-  "author": "Kody Doherty",
+  "author": "Kevin Ritz",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.20.1",
