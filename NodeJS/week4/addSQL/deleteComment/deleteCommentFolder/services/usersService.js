@@ -16,12 +16,12 @@ class UsersService {
     return data.rows;
   }
 
-  async createUser({ id, username, password, haircolor }) {
-    const newUser = new User(id, username, password, haircolor);
+  async createUser({ username, password, haircolor }) {
+    const newUser = new User(username, password, haircolor);
     return await this.usersRepo.createUser(newUser);
   }
-  async addComment({ id, comment_text, user_id }) {
-    const newComment = new Comment(id, comment_text, user_id);
+  async addComment({ comment_text, user_id }) {
+    const newComment = new Comment(comment_text, user_id);
     return await this.usersRepo.addComment(newComment);
   }
   async deleteUser({ id }) {

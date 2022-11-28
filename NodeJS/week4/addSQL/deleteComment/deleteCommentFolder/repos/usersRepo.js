@@ -10,16 +10,16 @@ class UsersRepo {
     return pool.query("SELECT * FROM comments");
   }
 
-  createUser({ id, username, password, haircolor }) {
+  createUser({ username, password, haircolor }) {
     return pool.query(
-      "INSERT INTO users (id, username, password, haircolor) VALUES ($1, $2, $3, $4)",
-      [id, username, password, haircolor]
+      "INSERT INTO users ( username, password, haircolor) VALUES ($1, $2, $3)",
+      [username, password, haircolor]
     );
   }
-  addComment({ id, comment_text, user_id }) {
+  addComment({ comment_text, user_id }) {
     return pool.query(
-      "INSERT INTO comments (id, comment_text, user_id) VALUES ($1, $2, $3)",
-      [id, comment_text, user_id]
+      "INSERT INTO comments ( comment_text, user_id) VALUES ($2, $3)",
+      [comment_text, user_id]
     );
   }
 
