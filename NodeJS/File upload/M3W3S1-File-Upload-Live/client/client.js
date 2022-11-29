@@ -20,11 +20,14 @@ const sendFiles = async () => {
   });
 
   const json = await response.json();
-  addImage(json?.message);
+  files.forEach((json) => {
+    addImage(json?.name);
+  });
   console.log(json);
 };
 
 function addImage(name) {
+  console.log(name);
   const img = document.createElement("img");
   img.src = `http://localhost:3002/${name}`;
   document.getElementById("image").appendChild(img);
