@@ -21,11 +21,11 @@ app.get("/caffeine_consumption_amount", (req, res) => {
 });
 
 app.post("/caffeine_consumption_amount", (req, res) => {
-  const caffeine_consumption_amount = req.body;
+  const new_caffeine_consumption_amount = req.body;
   try {
-    if (!isDuplicate(caffain_consumption)) {
-      caffain_consumption.date = generateDbId();
-      caffeine_consumption_amount.push(caffain_consumption);
+    if (!isDuplicate(caffeine_consumption_amount.date)) {
+      caffeine_consumption_amount.date = generateDbId();
+      caffeine_consumption_amount.push(new_caffeine_consumption_amount);
       res.send({
         message: "Caffeine Consumption Added!",
         caffeine_consumption_amount: caffeine_consumption_amount,
@@ -39,15 +39,14 @@ app.post("/caffeine_consumption_amount", (req, res) => {
   }
 });
 
-app.patch("/caffeine_consumption_amount/:caffeine_consumption", (req, res) => {
-  let caffeine_consumption_updated = caffeine_consumption.find(
-    (c) => c.caffeine_consumption === +req.params.caffeine_consumption
+app.patch("/caffeine_consumption_amount_updater", (req, res) => {
+  let caffeine_consumption_updated = caffeine_consumption_amount.find(
+    (t) => t.date === +req.params.date
   );
   try {
     if (caffeine_consumption_updated) {
-      const todoObj = req.body;
-      caffeine_consumption_updated.caffeine_consumption =
-        todoObj.caffeine_consumption;
+      const updated_caffeine = req.body;
+      caffeine_consumption_updated.date = updated_caffeine.date;
       res.send(caffeine_consumption_amount);
     } else {
       throw Error("Caffeine Consumtion does not exist.");
