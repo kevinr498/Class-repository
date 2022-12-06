@@ -11,3 +11,8 @@ CREATE TABLE comments (
 	comment_text VARCHAR,
 	user_id INTEGER REFERENCES users (id)
 );
+
+CREATE TABLE pdfs (
+	id SERIAL PRIMARY KEY,
+  name varchar(255) NOT NULL
+);

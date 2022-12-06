@@ -21,6 +21,7 @@ const sendFiles = async () => {
 
   const json = await response.json();
   files.forEach((json) => {
+    addPDFList();
     addImage(json?.name);
   });
   console.log(json);
@@ -31,6 +32,11 @@ function addImage(name) {
   const img = document.createElement("img");
   img.src = `http://localhost:3002/${name}`;
   document.getElementById("image").appendChild(img);
+}
+
+function addPDFList() {
+  const list = document.createElement(li);
+  list = ``;
 }
 
 form.addEventListener("submit", (e) => {

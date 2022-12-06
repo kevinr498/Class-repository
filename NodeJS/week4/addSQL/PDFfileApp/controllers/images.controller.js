@@ -1,8 +1,19 @@
+const ImagesServices = require("../services/images.service");
 const path = require("path");
 
 class ImagesController {
-  constructor() {}
-
+  constructor() {
+    this.imagesServices = new ImagesServices();
+  }
+  async getImages(req, res) {
+    try {
+      const images = await this.imagesServices.getImages();
+      res.send(images);
+    } catch (e) {
+      console.log(e);
+      res.status(500).send("ERROR!");
+    }
+  }
   async createImage(req, res) {
     try {
       const files = req.files;

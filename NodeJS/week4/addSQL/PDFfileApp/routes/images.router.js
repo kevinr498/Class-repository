@@ -11,4 +11,8 @@ imagesRouter.post(
   (req, res) => imagesController.createImage(req, res)
 );
 
+imagesRouter.get("/getImages", (req, res) =>
+  imagesController.getImages(req, res)
+);
+
 module.exports = imagesRouter;
