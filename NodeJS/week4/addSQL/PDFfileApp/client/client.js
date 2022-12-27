@@ -1,43 +1,43 @@
-const form = document.getElementById("imageForm");
+const form = document.getElementById("pdfUploader");
 
-const sendFiles = async () => {
-  const myImages = document.getElementById("imageInput").files;
+const sendFiles = async (req, res) => {
+  const myPDFs = document.getElementById("pdfInput").files;
   const formData = new FormData();
-  const files = Array.from(myImages);
-  console.log(files);
+  const files = Array.from(myPDFs);
+  const n = [files.length] - 1;
 
-  // single file
-  // formData.append(files[0].name, files[0]);
-
-  // multiple files
   files.forEach((file) => {
     formData.append(file.name, file);
   });
+  try {
+    const bodyText = [files[n].name];
+    res = await fetch("/createPdf", {
+      method: "POST",
+      body: JSON.stringify({ name: bodyText.toString() }),
+    });
+    res.send(res.body);
+  } catch (e) {
+    console.log(e);
+    return res.status(500).json({ status: "error", message: error });
+  }
 
-  const response = await fetch("http://localhost:3002/images", {
-    method: "POST",
-    body: formData,
+  files.forEach((file) => {
+    addPDF(file.name);
+    // addPDFList(myPDFs);
   });
-
-  const json = await response.json();
-  files.forEach((json) => {
-    addPDFList();
-    addImage(json?.name);
-  });
-  console.log(json);
 };
 
-function addImage(name) {
-  console.log(name);
-  const img = document.createElement("img");
-  img.src = `http://localhost:3002/${name}`;
-  document.getElementById("image").appendChild(img);
+function addPDF(json) {
+  console.log(json);
+  const pdf = document.createElement("p");
+  pdf.innerText = json;
+  document.getElementById("pdf").appendChild(pdf);
 }
 
-function addPDFList() {
-  const list = document.createElement(li);
-  list = ``;
-}
+// function addPDFList(listElements) {
+//   const list = document.createElement("li");
+//   list = listElements;
+// }
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();

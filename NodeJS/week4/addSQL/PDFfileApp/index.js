@@ -8,6 +8,9 @@ const app = createServer();
 app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "./client/index.html"));
 });
+app.post("/", (req, res) => {
+  res.sendFile(path.join(__dirname, "./client/index.html"));
+});
 
 app.listen(port, () => {
   console.log(`Express Server listening on port ${port}`);

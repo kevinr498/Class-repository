@@ -4,9 +4,7 @@
 const express = require("express");
 
 const bodyParser = require("body-parser");
-const userRouter = require("../routes/user.router");
-const commentRouter = require("../routes/comments.router");
-const imagesRouter = require("../routes/images.router");
+const pdfRouter = require("../routes/pdf.router");
 function createServer() {
   const app = express();
   app.use(bodyParser.urlencoded({ extended: false }));
@@ -15,9 +13,7 @@ function createServer() {
   app.use(express.static("client"));
   app.use(express.static("images"));
 
-  app.use(userRouter);
-  app.use(commentRouter);
-  app.use(imagesRouter);
+  app.use(pdfRouter);
 
   return app;
 }
