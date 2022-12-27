@@ -2,10 +2,14 @@ const express = require("express");
 const fileUpload = require("express-fileupload");
 const PdfsController = require("../controllers/pdfs.controller");
 
-const pdfRouter = express.Router();
 const pdfsController = new PdfsController();
+const pdfRouter = express.Router();
 
-pdfRouter.post("/createPdf", (req, res) => pdfsController.createPDF(req, res));
+pdfRouter.post(
+  "/createPdf",
+  fileUpload({ createParentPath: true }),
+  (req, res) => pdfsController.createPDF(req, res)
+);
 
 pdfRouter.get("/getPdfs", (req, res) => pdfsController.getPDFs(req, res));
 pdfRouter.delete("/deletePdf/:id", (req, res) =>

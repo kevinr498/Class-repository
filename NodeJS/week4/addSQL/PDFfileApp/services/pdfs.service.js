@@ -8,7 +8,7 @@ class PdfsServices {
 
   async createPdfs(name) {
     console.log(name, "hello services");
-    return await this.pdfRepo.createPDFs({ name: name });
+    return await this.pdfRepo.createPDFs({ name });
   }
   async getPDFs() {
     const data = await this.pdfRepo.getPDFs();

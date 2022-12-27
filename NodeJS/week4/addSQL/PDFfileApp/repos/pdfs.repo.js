@@ -9,7 +9,7 @@ class PdfRepo {
 
   createPDFs({ name }) {
     console.log(name, "hello repo");
-    return pool.query("INSERT INTO pdfs name VALUES ($1)", [name]);
+    return pool.query("INSERT INTO pdfs (name) VALUES ($1)", [name]);
   }
 
   deletePDF({ id }) {
