@@ -1,19 +1,5 @@
-let books = [
-  {
-    id: "1",
-    title: "The Awakening",
-    author: {
-      name: "Kate Chopin",
-    },
-  },
-  {
-    id: "2",
-    title: "City of Glass",
-    author: {
-      name: "Paul Auster",
-    },
-  },
-];
+import bookJson from "../resolvers/books.json" assert { type: "json" };
+let books = bookJson;
 
 const resolvers = {
   Query: {
@@ -25,23 +11,37 @@ const resolvers = {
     },
   },
   Mutation: {
-    addBook: (parent, { title, author }) => {
+    addBook: (parent, { title, author, genre, copiesInStock, unitePrice }) => {
       const book = {
         id: `${books.length + 1}`,
         title,
         author: { name: author },
+        genre,
+        copiesInStock,
+        unitePrice,
       };
 
       books.push(book);
       return book;
     },
-    editBook: (parent, {}) => {
+    editBook: (
+      parent,
+      { id, title, author, genre, copiesInStock, unitePrice }
+    ) => {
       books = books.map((book) => {
         if (book.id === id) {
-          return { ...book, title, author: { name: author } };
+          return {
+            ...book,
+            title,
+            author: { name: author },
+            genre,
+            copiesInStock,
+            unitePrice,
+          };
         }
-        return books;
+        return book;
       });
+      return books;
     },
     deleteBook: (parent, { id }) => {
       const book = {
@@ -52,16 +52,6 @@ const resolvers = {
       return books, "book has been deleted";
     },
   },
-  // Delete: {
-  //   deleteBook: (parent, { id }) => {
-  //     books = books.map((book) => {
-  //       if (book.id === id) {
-  //         return { ...book };
-  //       }
-  //       return book;
-  //     });
-  //   },
-  // },
 };
 
 export default resolvers;

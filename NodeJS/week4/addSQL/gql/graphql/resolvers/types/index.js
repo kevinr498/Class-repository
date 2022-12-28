@@ -4,6 +4,9 @@ type Book {
         id: ID 
         title: String
         author: Author
+        genre: String
+        copiesInStock: Int
+        unitePrice: Float
     }
 
     type Author {
@@ -17,8 +20,8 @@ type Book {
     }
 
     type Mutation {
-        addBook(title: String, author: String): Book
-        editBook(id: ID, title: String, author: String): [Book]
+        addBook(title: String, author: String, genre: String, copiesInStock: Int, unitePrice: Float): Book
+        editBook(id: ID, title: String, author: String, genre: String, copiesInStock: Int, unitePrice: Float): [Book]
         deleteBook(id: ID): Book
     }
     `;
