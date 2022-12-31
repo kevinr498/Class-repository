@@ -11,7 +11,7 @@ function createServer() {
   app.use(bodyParser.json());
 
   app.use(express.static("client"));
-  app.use(express.static("images"));
+  app.use(express.static("pdfs"));
 
   app.use(pdfRouter);
 

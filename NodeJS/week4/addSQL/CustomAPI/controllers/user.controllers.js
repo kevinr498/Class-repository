@@ -1,5 +1,5 @@
-const userServices = require("../services/user.service");
-const path = require("path");
+import userServices from "../services/user.service.js";
+import path from "path";
 
 class userController {
   constructor() {

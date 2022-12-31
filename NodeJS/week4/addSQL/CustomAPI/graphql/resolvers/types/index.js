@@ -1,28 +1,30 @@
 const typeDefs = `#graphql
 
 type Book {
-        id: ID 
+        bookId: Int
+        checkedOutBy: Int
         title: String
-        author: Author
-        genre: String
-        copiesInStock: Int
-        unitePrice: Float
+        author: String
     }
-
-    type Author {
-        name: String!
-        books: [Book]
-    }
+type User {
+    userId: Int
+    username: String
+    password: String
+    bookID: Int
+    
+}
 
     type Query {
+        users: [User]
         books: [Book]
         booksByAuthor(author: String): [Book]
     }
 
     type Mutation {
-        addBook(title: String, author: String, genre: String, copiesInStock: Int, unitePrice: Float): Book
+        addBook(title: String, author: String, checkedOutBy: Int): Book
         editBook(id: ID, title: String, author: String, genre: String, copiesInStock: Int, unitePrice: Float): [Book]
-        deleteBook(id: ID): Book
+        deleteBook(bookId: Int): Book
+        addUser(username: String, password: String, bookID: Int): User
     }
     `;
 

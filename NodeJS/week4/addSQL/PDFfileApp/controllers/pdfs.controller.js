@@ -17,9 +17,8 @@ class PdfsController {
   async createPDF(req, res) {
     try {
       const files = req.body;
-      console.log(files, "Hello controller");
+      console.log(files, "this is the data before calling service");
       const pdfs = await this.pdfsServices.createPdfs(files);
-      res.send(pdfs);
       return res.json({
         status: "Success",
         message: files,
@@ -32,22 +31,24 @@ class PdfsController {
 
   async getPdf(req, res) {
     try {
-      const { id } = req.params;
+      const id = req.params;
       const pdf = await this.pdfsServices.getPdf(id);
-      res.send(pdf);
-      res.status(200).send("Pdf found");
+      return res.json({
+        status: "PDF Found",
+        message: pdf,
+      });
     } catch (e) {
       console.log(e);
       res.status(500).send("ERROR! unable to get pdf");
     }
   }
+
   async deletePdf(req, res) {
     try {
-      const { id } = req.params;
+      const id = req.params;
       const pdf = await this.pdfsServices.deletePdf(id);
-      res.send(pdf);
       res.status(200).send("Pdf deleted");
-    } catch {
+    } catch (e) {
       console.log(e);
       res.status(500).send("ERROR! unable to delete pdf");
     }

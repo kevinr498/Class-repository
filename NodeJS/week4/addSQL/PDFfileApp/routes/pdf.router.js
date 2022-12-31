@@ -8,13 +8,15 @@ const pdfRouter = express.Router();
 pdfRouter.post(
   "/createPdf",
   fileUpload({ createParentPath: true }),
-  (req, res) => pdfsController.createPDF(req, res)
+  (req, res) => {
+    return pdfsController.createPDF(req, res);
+  }
 );
 
 pdfRouter.get("/getPdfs", (req, res) => pdfsController.getPDFs(req, res));
 pdfRouter.delete("/deletePdf/:id", (req, res) =>
   pdfsController.deletePdf(req, res)
 );
-pdfRouter.get("/getPdf/:id", (req, res) => pdfsController.getPDF(req, res));
+pdfRouter.get("/getPdf/:id", (req, res) => pdfsController.getPdf(req, res));
 
 module.exports = pdfRouter;

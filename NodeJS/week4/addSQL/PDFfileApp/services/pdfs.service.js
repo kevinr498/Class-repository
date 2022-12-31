@@ -7,21 +7,41 @@ class PdfsServices {
   }
 
   async createPdfs(name) {
-    console.log(name, "hello services");
-    return await this.pdfRepo.createPDFs({ name });
+    let createResult;
+    try {
+      createResult = await this.pdfRepo.createPDFs(name);
+    } catch (err) {
+      console.log(err);
+    }
+    return createResult;
   }
   async getPDFs() {
     const data = await this.pdfRepo.getPDFs();
+    try {
+      data = await this.pdfRepo.getPDFs();
+    } catch (err) {
+      console.log(err);
+    }
     return data.rows;
   }
 
   async getPdf(pdfId) {
-    const pdfRow = await this.usersRepo.getPdf(pdfId);
+    let pdfRow;
+    try {
+      pdfRow = await this.pdfRepo.getPdf(pdfId);
+    } catch (err) {
+      console.log(err);
+    }
     return pdfRow;
   }
 
   async deletePdf(pdfId) {
-    const pdfRow = await this.usersRepo.deletePdf(pdfId);
+    let pdfRow;
+    try {
+      pdfRow = await this.pdfRepo.deletePDF(pdfId);
+    } catch (err) {
+      console.log(err);
+    }
     return pdfRow;
   }
 }

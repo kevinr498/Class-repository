@@ -6,15 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./styles.css" />
     <script src="./client.js" defer></script>
-    <title>Express.js PDF Uploader</title>
+    <title>GQL Library</title>
   </head>
   <body>
-    <h1>Express.js PDF Uploader</h1>
-    <form id="pdfUploader" enctype="multipart/form-data">
-      <input type="file" id="pdfInput" multiple="multiple" accept=".pdf" />
-      <button>Upload</button>
-
-      <div id="pdf"></div>
+    <h1>Welcome to the GQL library checkout!</h1>
+    <form id="libraryForm" enctype="multipart/form-data">
+      <input type="input" id="username" placeholder="Username" />
+      <input type="password" id="password" placeholder="Password" />
+      <input type="input" id="bookTitle" placeholder="Book Title" />
+      <input type="input" id="Author" placeholder="Author" />
+      <button id="submit">Checkout!</button>
     </form>
   </body>
 </html>
