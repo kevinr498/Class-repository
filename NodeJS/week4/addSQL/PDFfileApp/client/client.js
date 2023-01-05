@@ -32,6 +32,28 @@ const sendFiles = async () => {
   });
 };
 
+
+
+document.getElementById("getFiles").addEventListener("click", (e) => {
+  e.preventDefault();
+  getPDFS();
+  addPDF();
+
+});
+
+function getPDFS() {
+  console.log('gottem')
+  try {
+    result = await fetch("/getPdfs", {
+      method: "GET",
+      headers: myHeaders,
+      body: JSON.stringify(body),
+    });
+  } catch (e) {
+    console.log(e);
+  }
+}
+
 function addPDF(json) {
   const pdf = document.createElement("p");
   pdf.innerText = json;

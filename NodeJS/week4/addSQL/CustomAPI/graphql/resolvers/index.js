@@ -20,6 +20,33 @@ const resolvers = {
         throw Error(err);
       }
     },
+    libraryInventory: async (parent, args, { db }) => {
+      try {
+        const results = await db.libraryInventory.findAll({});
+        return results;
+      } catch (err) {
+        console.log(err);
+        throw Error(err);
+      }
+    },
+    library: async (parent, args, { db }) => {
+      try {
+        const results = await db.library.findAll({});
+        return results;
+      } catch (err) {
+        console.log(err);
+        throw Error(err);
+      }
+    },
+    checkedOut: async (parent, args, { db }) => {
+      try {
+        const results = await db.checkedOut.findAll({});
+        return results;
+      } catch (err) {
+        console.log(err);
+        throw Error(err);
+      }
+    },
   },
 
   Mutation: {

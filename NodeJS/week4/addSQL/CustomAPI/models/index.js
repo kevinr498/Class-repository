@@ -4,6 +4,11 @@ import { Sequelize, DataTypes } from "sequelize";
 
 import User from "./users.js";
 import Book from "./book.js";
+import Library from "./library.js";
+import LibraryInventory from "./libraryInventory.js";
+import CheckedOut from "./checkedOut.js";
+import libraryInventory from "./libraryInventory.js";
+import checkedOut from "./checkedOut.js";
 
 const db = {};
 const sequelize = new Sequelize(
@@ -31,13 +36,10 @@ db.Sequelize = Sequelize;
 
 db.User = User(sequelize, DataTypes);
 db.Book = Book(sequelize, DataTypes);
+db.CheckedOut = CheckedOut(sequelize, DataTypes);
+db.libraryInventory = libraryInventory(sequelize, DataTypes);
+db.Library = Library(sequelize, DataTypes);
 db.User.hasMany(db.Book);
 db.Book.belongsTo(db.User);
-
-// db.User.belongsTo(db.Book, { foreignKey: "checkedOutBy", sourceKey: "userId" });
-// db.User.hasMany(db.Book, {
-//   foreignKey: "bookId",
-//   sourceKey: "bookID",
-// });
 
 export default db;

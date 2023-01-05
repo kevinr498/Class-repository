@@ -14,10 +14,33 @@ type User {
     
 }
 
+type Library {
+    name: String
+    location: String
+    locationId: Int
+}
+
+type CheckedOut {
+    numberOfBooks: Int
+    numberOfBooksCheckedOut: Int
+}
+
+type LibraryInventory {
+    numberOfBooks: Int
+    numberOfBooksCheckedOut: Int
+    numberOfUsersWithBooks: Int
+}
+
+
+
+
     type Query {
         users: [User]
         books: [Book]
         booksByAuthor(author: String): [Book]
+        libraryInventory: [LibraryInventory]
+        library: [Library]
+        checkedOut: [CheckedOut]
     }
 
     type Mutation {
