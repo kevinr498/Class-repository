@@ -1,34 +1,45 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import './App.css'
+import { useState } from "react";
+import reactLogo from "./assets/react.svg";
+import { createElement } from "react";
+import "./App.css";
+import axios from "axios";
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [text, setTextValue] = useState("");
+
+  const handleSubmit = (event) => {
+    console.log("Created Image Link");
+    console.log(imageSrc);
+    event.preventDefault();
+    document.getElementById("image").appendChild(createImage);
+  };
+  const imageSrc = "https://source.unsplash.com/random?" + text;
+  const createImage = createElement("img", { src: imageSrc }, null);
 
   return (
     <div className="App">
       <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src="/vite.svg" className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://reactjs.org" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+        <h1>Display a Random Image</h1>
       </div>
-      <h1 class="flex">Vite + React</h1>
+      <h4>Search (separate terms with commas - no spaces)</h4>
       <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
+        <form onSubmit={handleSubmit}>
+          <input
+            type="text"
+            onChange={(event) => setTextValue(event.target.value)}
+            value={text}
+          ></input>
+          <button className="imageSubmitButton" type="submit">
+            GO
+          </button>
+        </form>
+        <div id="image"></div>
       </div>
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
       </p>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
