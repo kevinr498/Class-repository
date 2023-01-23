@@ -6,5 +6,5 @@ export default function Button(props) {
 }
 
 Button.propTypes = {
-  text: PropTypes.string.isRequired,
+  text: PropTypes.number.isRequired,
 };

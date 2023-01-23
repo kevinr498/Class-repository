@@ -3,10 +3,13 @@ import Button from "./button.jsx";
 export default function Body() {
   const [count, setCount] = useState(0);
 
-  buttons = [1, 2, 3, 4, 5];
+  const buttons = [1, 2, 3, 4, 5];
 
   return (
     <div className="card">
+      {buttons.map((num) => {
+        return <Button text={num} />;
+      })}
       <Button text="1" onClick={() => setCount((count) => count + text)} />
       <Button text="2" onClick={() => setCount((count) => count + text)} />
       <Button text="3" onClick={() => setCount((count) => count + text)} />
