@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, createElement } from "react";
 import Header from "./components/header.jsx";
 import Body from "./components/body.jsx";
 import ReadMe from "./components/readMe.jsx";
@@ -12,7 +12,6 @@ function App() {
   const checkValue = "fred";
   const splitArrary = ([] = checkValue.split(""));
   const [guessedValue = [], setGuessedValue] = useState();
-  const guessedValueArray = (guessedValue.concat = []);
 
   const handleChange = (event) => {
     console.log(event.target.value);
@@ -26,15 +25,21 @@ function App() {
     const trueValue = splitArrary.findIndex((value) => {
       if (value === testValue) return true;
     });
-    setGuessedValue(trueValue, (guessedValueArray = guessedValue.concat = []));
-
+    setGuessedValue(trueValue);
+    const createGuessedLetter = createElement(
+      "h1",
+      {},
+      splitArrary[guessedValue]
+    );
+    const root = createRoot(document.getElementById("guessedValue"));
+    root.render(createGuessedLetter);
     console.log(trueValue, guessedValue);
   }
 
   return (
     <div className="App ">
       <div className="flex">
-        <Header text={splitArrary[guessedValue]} />
+        <div id="guessedValue"></div>
       </div>
       <input onKeyUp={handleChange} maxLength="1" />
     </div>
