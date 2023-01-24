@@ -10,24 +10,17 @@ import "toolcool-range-slider";
 function App() {
   const feeling = ["😥", "😀", "😠"];
   const [value, setValue] = useState(0);
-  function setNewValue(newValue) {
-    return (value = newValue), console.log(value, newValue, "test");
-  }
 
   const handleChange = (event) => {
     feeling[event.target.value];
     const newValue = event.target.value;
-    setNewValue(newValue);
+    setValue(newValue);
+    return;
   };
-
-  console.log(feeling.indexOf("sad"));
-  console.log(value);
 
   return (
     <div className="App">
       <Header />
-      <Body />
-      <ReadMe />
       <toolcool-range-slider
         slider-width="300px"
         slider-height="15px"
@@ -38,7 +31,6 @@ function App() {
         step="1"
         onClick={handleChange}
       />
-      <h1 className="align">{feeling[value]}</h1>
 
       <Feeling text={feeling[value]} />
     </div>
