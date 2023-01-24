@@ -32,7 +32,13 @@ function App() {
   return (
     <div className="App ">
       <div className="flex">
-        <Header text={splitArrary[guessedValue]} />
+        <Header text={guessedValue === 0 ? splitArrary[guessedValue] : "_"} />
+        <p> - </p>
+        <Header text={guessedValue === 1 ? splitArrary[guessedValue] : "_"} />
+        <p> - </p>
+        <Header text={guessedValue === 2 ? splitArrary[guessedValue] : "_"} />
+        <p> - </p>
+        <Header text={guessedValue === 3 ? splitArrary[guessedValue] : "_"} />
       </div>
       <input onKeyUp={handleChange} maxLength="1" />
     </div>
