@@ -1,11 +1,9 @@
-import reactLogo from "../assets/react.svg";
+import PropTypes from "prop-types";
 
-export default function Header() {
-  return (
-    <header>
-      <div>
-        <h2>How are you feeling?</h2>
-      </div>
-    </header>
-  );
+export default function Header(props) {
+  return <h1 className="rounded bg-blue">{props.text}</h1>;
 }
+
+Header.propTypes = {
+  text: PropTypes.string.isRequired,
+};

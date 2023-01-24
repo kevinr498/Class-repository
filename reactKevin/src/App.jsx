@@ -8,31 +8,35 @@ import "./App.css";
 import "toolcool-range-slider";
 
 function App() {
-  const feeling = ["😥", "😀", "😠"];
-  const [value, setValue] = useState(0);
+  const [value, setValue] = useState();
+  const checkValue = "fred";
+  const splitArrary = ([] = checkValue.split(""));
+  const [guessedValue = [], setGuessedValue] = useState();
+  const guessedValueArray = (guessedValue.concat = []);
 
   const handleChange = (event) => {
-    feeling[event.target.value];
+    console.log(event.target.value);
     const newValue = event.target.value;
     setValue(newValue);
+    checkArray(newValue);
     return;
   };
+  function checkArray(valueCheck) {
+    const testValue = valueCheck;
+    const trueValue = splitArrary.findIndex((value) => {
+      if (value === testValue) return true;
+    });
+    setGuessedValue(trueValue, (guessedValueArray = guessedValue.concat = []));
+
+    console.log(trueValue, guessedValue);
+  }
 
   return (
-    <div className="App">
-      <Header />
-      <toolcool-range-slider
-        slider-width="300px"
-        slider-height="15px"
-        slider-radius="0.5rem"
-        min="0"
-        max="2"
-        value={value}
-        step="1"
-        onClick={handleChange}
-      />
-
-      <Feeling text={feeling[value]} />
+    <div className="App ">
+      <div className="flex">
+        <Header text={splitArrary[guessedValue]} />
+      </div>
+      <input onKeyUp={handleChange} maxLength="1" />
     </div>
   );
 }
