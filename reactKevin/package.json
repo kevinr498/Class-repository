@@ -9,6 +9,11 @@
     "preview": "vite preview"
   },
   "dependencies": {
+<<<<<<< Updated upstream
+=======
+    "jest-dom": "^4.0.0",
+    "postcss": "^8.4.21",
+>>>>>>> Stashed changes
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
